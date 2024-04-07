@@ -9,5 +9,9 @@ datasource db {
 
 model User {
   id Int @default(autoincrement()) @id
-  user_name String
+  name String
+  student_id String
+  phone_number String
+  email String
+  password String
 }
