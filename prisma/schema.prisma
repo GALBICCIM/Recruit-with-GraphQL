@@ -15,3 +15,11 @@ model User {
   email String
   password String
 }
+
+model Form {
+  id Int @default(autoincrement()) @id
+  intro_self String
+	because String
+	capability String
+	ambition String
+}
