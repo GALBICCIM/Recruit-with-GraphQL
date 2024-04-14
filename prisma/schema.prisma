@@ -18,6 +18,8 @@ model User {
 
 model Form {
   id Int @default(autoincrement()) @id
+  applicant User @relation(fields: [applicantId], references: [id])
+  applicantId Int
   intro_self String
 	because String
 	capability String
