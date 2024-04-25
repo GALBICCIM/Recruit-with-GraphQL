@@ -32,6 +32,7 @@ const typeDefs = gql`
 		deleteUser(id: Int!): User
 
 		createForm(intro_self: String!, because: String!, capability: String!, ambition: String!): Form
+		deleteForm(id: Int!): Form
 		fetchForm(id: Int!): Form
 	}
 `;
@@ -85,6 +86,13 @@ const resolvers = {
 					because,
 					capability,
 					ambition
+				}
+			});
+		},
+		deleteForm: (_parent, { id }, _context) => {
+			return client.Form.delete({
+				where: {
+					id
 				}
 			});
 		},

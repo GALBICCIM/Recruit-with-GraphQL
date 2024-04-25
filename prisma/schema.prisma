@@ -9,6 +9,7 @@ datasource db {
 
 model User {
   id Int @default(autoincrement()) @id
+  forms Form[]
   name String
   student_id String
   phone_number String
